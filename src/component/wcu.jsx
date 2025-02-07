@@ -1,4 +1,7 @@
 import React from 'react'
+import wch1 from '../assets/wcu1.jpg'
+import wch2 from '../assets/wcu2.jpg'
+import wch3 from '../assets/wcu3.jpg'
 
 export default function wcu() {
   return (
@@ -38,12 +41,27 @@ export default function wcu() {
                             <div key={index} className=' relative flex flex-col justify-center 
                              items-center space-x-4 p-6 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 text-gray-800 rounded-xl shadow-lg hover:scale-105 
                               transition-transform duration-300'>
-                                <h4>{box.title}</h4>
-                                <p>{box.text}</p>
+                                <h4  className='font-extrabold text-lg sm:text-xl text-center'>{box.title}</h4>
+                                <p className='text-sm sm:text-md font-light text-center'>{box.text}</p>
                               </div>
                         ))}
                     </div>
                 </div>
+
+                    <div className='lg:w-1/2 w-full'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+                        <div className='grid grid-rows-2 gap-6'>
+                            <img src={wch1} alt="img1" className='w-full h-full object-cover rounded-lg shadow-lg border
+                             border-gray-700 hover:scale-105 transition-transform duration-300' />
+                            <img src={wch2} alt="img2" className='w-full h-full object-cover rounded-lg shadow-lg border
+                             border-gray-700 hover:scale-105 transition-transform duration-300' />
+                        </div>
+                        <div className='w-full'>
+                            <img src={wch3} alt="img3" loading='lazy' className='w-full h-full object-cover rounded-lg shadow-lg border
+                             border-gray-700 hover:scale-105 transition-transform duration-300' />
+                        </div>
+                    </div>
+                    </div>
 
             </div>
         </div>
